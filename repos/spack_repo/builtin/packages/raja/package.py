@@ -335,13 +335,11 @@ class Raja(CachedCMakePackage, CudaPackage, ROCmPackage):
         "please use a newer release.",
     )
 
-    # conflicts("^cuda@13:", when="@:2025.12.2 +cuda", msg="RAJA versions up to 2025.12.2 do not support CUDA 13+")
-
-    #conflicts(
-    # "^cuda@13:",
-    #    when="@2025.03.0:2025.12.2 +cuda",
-    #    msg="RAJA versions up to 2025.12.2 do not support CUDA 13+",
-    # )
+    conflicts(
+        "^cuda@13:",
+        when="@:2025.12.2 +cuda",
+        msg="RAJA versions up to and including 2025.12.2 do not support CUDA 13+",
+    )
 
     def _get_sys_type(self, spec):
         sys_type = spec.architecture
