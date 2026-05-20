@@ -265,6 +265,8 @@ class Raja(CachedCMakePackage, CudaPackage, ROCmPackage):
     depends_on("c", type="build")
 
     depends_on("blt", type="build")
+    # TODO(smith84): Edit the following line after the June 2026 RAJA suite release
+    depends_on("blt@0.7.2:", type="build", when="@develop")
     depends_on("blt@0.7.1:", type="build", when="@2025.09.0:")
     depends_on("blt@0.7.0:", type="build", when="@2025.03.0:")
     depends_on("blt@0.6.2:", type="build", when="@2024.02.1:")
@@ -276,6 +278,7 @@ class Raja(CachedCMakePackage, CudaPackage, ROCmPackage):
     depends_on("blt@0.4.0:0.4.1", type="build", when="@0.13.0")
     depends_on("blt@0.3.6:0.4.1", type="build", when="@:0.12.0")
     conflicts("^blt@:0.3.6", when="+rocm")
+    conflicts("^blt@:0.7.1", when="+cuda ^cuda@13:", msg="CUDA 13+ requires BLT 0.7.2 or newer")
 
     depends_on("camp")
     depends_on("camp+openmp", when="+openmp")
