@@ -29,6 +29,7 @@ class Openssl(Package):  # Uses Fake Autotools, should subclass Package
 
     license("Apache-2.0")
 
+    version("3.6.2", sha256="aaf51a1fe064384f811daeaeb4ec4dce7340ec8bd893027eee676af31e83a04f")
     version("3.6.1", sha256="b1bfedcd5b289ff22aee87c9d600f515767ebf45f77168cb6d64f231f518a82e")
     version("3.5.5", sha256="b28c91532a8b65a1f983b4c28b7488174e4a01008e29ce8e69bd789f28bc2a89")
     version("3.4.4", sha256="7bdf55ac20f2779e99e5eca306f824fad2b37dee5a06cc35ed5a8b85a6060010")
