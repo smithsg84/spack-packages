@@ -46,13 +46,13 @@ class Openssl(Package):  # Uses Fake Autotools, should subclass Package
         version("3.3.3", sha256="712590fd20aaa60ec75d778fe5b810d6b829ca7fb1e530577917a131f9105539")
         version("3.2.4", sha256="b23ad7fd9f73e43ad1767e636040e88ba7c9e5775bfa5618436a0dd2c17c3716")
         version("3.1.8", sha256="d319da6aecde3aa6f426b44bbf997406d95275c5c59ab6f6ef53caaa079f456f")
-        version("3.0.19", sha256="fa5a4143b8aae18be53ef2f3caf29a2e0747430b8bc74d32d88335b94ab63072")
-        version(
-            "3.0.18", sha256="d80c34f5cf902dccf1f1b5df5ebb86d0392e37049e5d73df1b3abae72e4ffe8b"
-        )
-        version(
-            "3.0.16", sha256="57e03c50feab5d31b152af2b764f10379aecd8ee92f16c985983ce4a99f7ef86"
-        )
+        #version("3.0.19", sha256="fa5a4143b8aae18be53ef2f3caf29a2e0747430b8bc74d32d88335b94ab63072")
+        #version(
+        #    "3.0.18", sha256="d80c34f5cf902dccf1f1b5df5ebb86d0392e37049e5d73df1b3abae72e4ffe8b"
+        #)
+        #version(
+        #    "3.0.16", sha256="57e03c50feab5d31b152af2b764f10379aecd8ee92f16c985983ce4a99f7ef86"
+        #)
 
     # On Cray DVS mounts, we can't make symlinks to /etc/ssl/openssl.cnf,
     # either due to a bug or because DVS is not intended to be POSIX compliant.
